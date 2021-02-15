@@ -28,12 +28,14 @@ SERVERIP="8.8.8.8"
 
 ## Dont change things behind this line
 
+
 for ((i=1;i<=3;i++))
-do                                                           #ping request for google.de
+do
+  echo >> /path/to/file "Start connection script" +                                                            #ping request for google.de
   if ping -c3 ${SERVERIP}; then (                              #everything is fine
   echo "Internet connection established
       > All Okay"
-      echo "`date`"
+
 break
 ) else (
                                                               #if no answer then reboot
@@ -49,4 +51,9 @@ SID=$(curl -i -s -k -d 'response='${RESPONSE} -d 'page=' -d "username=${USERNAME
 echo 'Reboot in progress ... please allow up to 2 minutes for the box to come up!'
 curl -s "${BOXURL}/reboot.lua?sid=${SID}&extern_reboot=1&ajax=1" >/dev/null                                                       #
 )
+
+
+
+sleep 30m
+
 #EOF
