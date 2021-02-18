@@ -28,6 +28,14 @@ SERVERIP="8.8.8.8"
 
 ## Dont change things behind this line
 
+#!/bin/bash
+if (sleep 0 && ping -c1 8.8.8.8 > /dev/null) || \
+(sleep 3 && ping -c1 8.8.8.8 > /dev/null) || \
+(sleep 3 && ping -c1 8.8.8.8 > /dev/null) ; then
+echo "Internet established"
+else
+echo "Script"
+fi
 
 for ((i=1;i<=3;i++))
 do
