@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 #
-# Author:       Roy Schlegel
-# E-Mail:       royschlegel@web.de
-# Version:      0.01
+# Author:       adihadi123
+# E-Mail:       adi_h@gmx.net
+# Version:      0.02
 # Last Updated: 12.02.2021
 #
 # Description:
